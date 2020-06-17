@@ -62,8 +62,12 @@ public class Bank {
 				bankInfo.setUniqueIdType(uniqueIdType);
 				
 				// is Database and Table already created?
-				boolean noDatabase = false;
-				boolean noTable = false;
+				System.out.println("Do you want the program to create database? if no enter 'false'");
+				boolean noDatabase = Boolean.parseBoolean(br.readLine());
+				System.out.println("Do you want the program to create table? if no enter 'false'");
+				boolean noTable = Boolean.parseBoolean(br.readLine());
+				//boolean noDatabase = false;
+				//boolean noTable = false;
 				
 				//Save values to table
 				userDao.saveUserInfo(bankInfo, noDatabase, noTable);
